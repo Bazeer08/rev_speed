@@ -1,0 +1,38 @@
+<div class="card-container" >
+    <mat-card class="custom-card">
+      <div class="plan-header" style="background: linear-gradient(to right,  #7091F5,#40128B ); ">
+        <h2>{{planDetails.plan_name}}</h2>
+      </div>
+      <mat-list>
+        <mat-list-item>
+          <strong>{{planDetails.billing_cycle}}</strong>
+        </mat-list-item>
+        <hr/>
+        <mat-list-item>
+          <strong>Speed</strong> 
+        </mat-list-item>
+        <mat-list-item>
+          <strong>{{planDetails.plan_speed}}</strong>   
+        </mat-list-item>
+        
+       
+        <hr/>
+        <!-- <mat-list-item>
+          <strong>Calls</strong> 
+        </mat-list-item>
+        <br/>
+        <mat-list-item>
+          <strong></strong> Unlimited
+        </mat-list-item>
+        <br/>
+        <mat-divider></mat-divider> -->
+        
+        <div class="plan-footer">
+          <span class="cost">{{planDetails.plan_price}}</span>
+          <button mat-raised-button color="primary" class="custom-button" style="color: white;">Change</button>
+          
+          <button mat-raised-button color="primary" class="custom-button" style="color: white;" (click)="unsub()">Unsubscribe</button>
+        </div>
+      </mat-list>
+    </mat-card>
+  </div>

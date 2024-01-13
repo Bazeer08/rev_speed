@@ -1,0 +1,51 @@
+.plan-header {
+    padding: 0px;
+    color: white;
+    text-align: center;
+  }
+  
+  .plan-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 19px;
+  }
+  
+  .cost {
+    font-weight: bold;
+  }
+  
+  .card-container {
+    width: 400px; /* Adjust the width as needed */
+    height: 10px;
+    margin: auto; /* Center the card horizontally */
+    margin-top: 20px; /* Add margin for spacing */
+    
+  }
+  
+  .mat-list-item {
+    display: block;
+  
+  }
+  .custom-card {
+    border-radius: 10px; /* Adjust border radius as needed */
+     /* Adjust box shadow as needed */
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;}
+   .custom-button {
+    
+    color: #ce3f3f;
+    border-radius: 20px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  } 
+  
+  .custom-button {
+    background: linear-gradient(to right, #7091F5,#40128B);
+    
+  }
+  .custom-button:hover{
+  
+  transition: ease-out;
+  
+  }
