@@ -12,12 +12,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { PlansComponent } from './plans/plans.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatListModule } from '@angular/material/list';
+import { EditableComponent } from './editable/editable.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfilepageComponent,
-    PlansComponent
+    PlansComponent,
+    EditableComponent
   ],
   imports: [
     BrowserModule,

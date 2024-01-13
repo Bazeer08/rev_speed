@@ -15,6 +15,8 @@ export class PlansComponent implements OnInit{
   
 
   planDetails !: i_plans;
+  public USsure:boolean =false;
+  public USchange:boolean =false;
  
   constructor(private basicPlanService: BasicPlanService,private profileService :ProfileService) {
 }
@@ -41,12 +43,39 @@ export class PlansComponent implements OnInit{
 
    unsub()
    {
+    this.USsure = false;
      console.log("enterded unsub");
  this.profileService.delete().subscribe(
         
         
      error=> console.error('Error Deleting Plan',error));
    }
+
+UChange()
+{
+  console.log("I got Toggle Change clicked")
+  if(this.USchange){
+    this.USchange = false;
+  }
+  else{
+    this.USchange = true;
+  }
+}
+
+
+
+
+UnSubToggle()
+{
+  console.log("I got Toggle Sub clicked")
+  if(this.USsure){
+    this.USsure = false;
+  }
+  else{
+    this.USsure = true;
+  }
+}
+
 }
 
 

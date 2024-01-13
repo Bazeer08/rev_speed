@@ -1,9 +1,13 @@
 <div class="card-container" >
     <mat-card class="custom-card">
-      <div class="plan-header" style="background: linear-gradient(to right,  #7091F5,#40128B ); ">
-        <h2>{{planDetails.plan_name}}</h2>
+      <div class="plan-header" style="background: linear-gradient(to right,  #03a9f4,#03a9f4 ); ">
+        <h2>My Plan</h2>
       </div>
+
       <mat-list>
+        <mat-list-item>
+        {{planDetails.plan_name}}
+      </mat-list-item>
         <mat-list-item>
           <strong>{{planDetails.billing_cycle}}</strong>
         </mat-list-item>
@@ -29,10 +33,28 @@
         
         <div class="plan-footer">
           <span class="cost">{{planDetails.plan_price}}</span>
-          <button mat-raised-button color="primary" class="custom-button" style="color: white;">Change</button>
+          <button mat-raised-button color="primary" class="custom-button" style="color: white;" (click)="UChange()">Change</button>
           
-          <button mat-raised-button color="primary" class="custom-button" style="color: white;" (click)="unsub()">Unsubscribe</button>
+          <button mat-raised-button color="primary" class="custom-button" style="color: white;" (click)="UnSubToggle()">Unsubscribe</button>
         </div>
       </mat-list>
     </mat-card>
   </div>
+
+  <div class="WholePage" *ngIf="USsure">
+    <div class="editShowCss">
+    <h2 style="color: white;">Are You Sure?</h2>
+    <div style="display: flex;" class="button"><button (click)="unsub()">Yes</button> <button (click)="UnSubToggle()">No</button></div>
+    </div>
+  </div>
+
+
+  <div class="WholePage" *ngIf="USchange">
+    <div class="editShowCss">
+    <h2 style="color: white;">The Current Plan will Be</h2>
+    <h2 style="color: white;">Unsubscribed...</h2>
+    <h2 style="color: white;">Are You Sure?</h2>
+    <div style="display: flex;" class="button"><button>Yes</button> <button (click)="UChange()">No</button></div>
+    </div>
+  </div>
+

@@ -1,3 +1,10 @@
+*{
+    top: 0;
+    bottom: 0;
+}
+
+
+
 /* .example-card {
     max-width: 400px;
   }
@@ -21,7 +28,8 @@
     margin: 20px auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease-in-out;
-    background: linear-gradient(135deg, #f3f5f7, #ef7c08);
+    background-color: #03a9f4;
+    border-radius: 10px;
     
 }
 
@@ -89,15 +97,55 @@ mat-card-actions {
     padding: 15px;
 }
 
-button {
+.button {
     background-color: #3498db;
     color: #fff;
     padding: 10px 15px;
     border: none;
     cursor: pointer;
+    height: 30px;
     border-radius: 3px;
 }
 
-button:hover {
-    background-color: #2980b9;
+.button:hover {
+    background-color: #01579b;
+}
+
+
+.cancel {
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    height: 30px;
+    border-radius: 3px;
+}
+
+.cancel:hover {
+    background-color: #01579b;
+}
+
+
+
+.editShowCss{
+    border-radius: 10px;
+    padding: 20px;
+    border: solid 2px black;
+    background-color:#01579b;
+    color: black;
+    
+}
+.WholePage{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 9999;
+    background-color: rgba(255, 255, 255, 0.0x1); /* Transparent background */
+    backdrop-filter: blur(10px); /* Apply a blur effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease-in-out forwards;
 }

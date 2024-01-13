@@ -70,7 +70,7 @@ return this.name;
   {
  console.log("entered proser unsub");
     this.duserprofile.plan_id=0;
-    this.duserprofile.plan_type="";
+    this.duserprofile.plan_type="home_plans";
     console.log(this.duserprofile.id);
     console.log(this.duserprofile.plan_id);
     console.log(this.duserprofile.plan_type);

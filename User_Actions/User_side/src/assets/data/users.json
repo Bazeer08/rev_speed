@@ -122,6 +122,13 @@
   ],
   "home_plans": [
     {
+      "id": 0,
+      "billing_cycle": "NO ACTIVE PLAN",
+      "plan_name": "",
+      "plan_speed": "",
+      "plan_price": 0
+    },
+    {
       "id": 1,
       "billing_cycle": "Monthly",
       "plan_name": "Basic Plan",
@@ -239,20 +246,20 @@
       "customer_name": "Bazeer ",
       "customer_phone": 9876543210,
       "customer_email": "baz@example.com",
-      "customer_address": "123 Main St",
+      "customer_address": "123 Main Sthjfjfgdhf",
       "customer_pass": "baz@example.com",
-      "plan_id": 1,
+      "plan_id": 0,
       "plan_type": "home_plans",
       "id": 1
     },
     {
-      "customername": "Bob John",
-      "phoneNumber": 5555555555,
-      "emailId": "bob.johnson@example.com",
-      "address": "789 Pine Blvd",
-      "pass": "bob123pass",
-      "planid": 1,
-      "plantype": "home_plans",
+      "customer_name": "Bob Jo",
+      "customer_phone": "555555",
+      "customer_email": "bob.johnson@example.com",
+      "customer_address": "789 Pine ",
+      "customer_pass": "bob123pass",
+      "plan_id": 0,
+      "plan_type": "",
       "id": 3
     },
     {
