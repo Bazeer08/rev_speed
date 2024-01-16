@@ -13,13 +13,15 @@ import { PlansComponent } from './plans/plans.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatListModule } from '@angular/material/list';
 import { EditableComponent } from './editable/editable.component';
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfilepageComponent,
     PlansComponent,
-    EditableComponent
+    EditableComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,

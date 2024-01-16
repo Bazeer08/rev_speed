@@ -1,3 +1,7 @@
+
+<app-nav></app-nav>
+
+<div style="padding-top: 8vh;"></div>
 <mat-card class="example-card">
   <mat-card-header>
     <div mat-card-avatar class="example-header-image"></div>
@@ -39,8 +43,8 @@
 
 <div class="WholePage" *ngIf="editShow">
   <div class="editShowCss">
-    <button (click)="SHform()" (click)="toggleEdit()" class="button">
-      Save
+    <button  (click)="toggleEdit()" class="button">
+      {{buttonText}}
     </button>
 
     <svg
@@ -60,15 +64,16 @@
     </svg>
 
     <form [formGroup]="profileForm">
+      <label style="color: white" for="num">User Name:</label>
       <input
         type="text"
-        *ngIf="!isEnabled"
+        
         id="name"
         formControlName="customer_name"
-        value={{
+        value="{{
         userProfile.customer_name
-        }}
-      />
+        }}"
+      /><br/> 
 
       <label style="color: white" for="num">PHONE NUMBER:</label>
       <input
@@ -122,3 +127,4 @@ value={{ userProfile.customer_address }}</textarea
       can be found in the LICENSE file at https://angular.io/license -->
 <!-- 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 -->
 <!-- (click)="toggleEdit()" -->
+<app-plans></app-plans>

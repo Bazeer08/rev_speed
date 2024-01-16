@@ -15,15 +15,16 @@ export class ProfilepageComponent implements OnInit{
   public isEnabled = true;
   public buttonText = 'Edit';
   public editShow:boolean =false;
+  
 
   updatedProfile !:Iuser;
 
   constructor(private UserProfileService: ProfileService, private fb: FormBuilder) { 
     this.profileForm = this.fb.group({
       customer_name:[{ value:'',disabled: this.isEnabled}, Validators.required],
-     customer_phone: [{ value:''}, Validators.required],
+     customer_phone: [{ value:'',disabled: this.isEnabled}, Validators.required],
       customer_email: [{value:'', disabled: true}, Validators.required],
-      customer_address: [{ value:''}, Validators.required],
+      customer_address: [{ value:'',disabled: this.isEnabled}, Validators.required],
       customer_pass:[{value:'',disabled: true},Validators.required],
       plan_id: [{value:'', disabled: true}, Validators.required],
       plan_type: [{value:'', disabled: true}, Validators.required],
@@ -54,10 +55,10 @@ ngOnInit() {
 
 
   });
-  this.UserProfileService.setPlanid(this.userProfile.plan_id);
+  
   
 });
-this.profileForm.get('name')?.valueChanges.subscribe((name: string) => {
+this.profileForm.get('customer_name')?.valueChanges.subscribe((name: string) => {
   if (!this.isEnabled) {
     this.userProfile.customer_name= name;
   }
@@ -87,6 +88,7 @@ toggleEdit()
           this.updatedProfile = updatedProfile;
 
           console.log('Profile updated successfully',updatedProfile);
+          this.userProfile = updatedProfile;
           this.editShow = false;
          // Update the local profile with the server response
       },

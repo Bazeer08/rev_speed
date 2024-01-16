@@ -6,17 +6,17 @@
 
       <mat-list>
         <mat-list-item>
-        {{planDetails.plan_name}}
+        {{planDetails?.plan_name}}
       </mat-list-item>
         <mat-list-item>
-          <strong>{{planDetails.billing_cycle}}</strong>
+          <strong>{{planDetails?.billing_cycle}}</strong>
         </mat-list-item>
         <hr/>
         <mat-list-item>
           <strong>Speed</strong> 
         </mat-list-item>
         <mat-list-item>
-          <strong>{{planDetails.plan_speed}}</strong>   
+          <strong>{{planDetails?.plan_speed}}</strong>   
         </mat-list-item>
         
        
@@ -32,8 +32,8 @@
         <mat-divider></mat-divider> -->
         
         <div class="plan-footer">
-          <span class="cost">{{planDetails.plan_price}}</span>
-          <button mat-raised-button color="primary" class="custom-button" style="color: white;" (click)="UChange()">Change</button>
+          <span class="cost">{{planDetails?.plan_price}}</span>
+          <button mat-raised-button color="primary" class="custom-button" style="color: white;" (click)="UChange()">Change/Add</button>
           
           <button mat-raised-button color="primary" class="custom-button" style="color: white;" (click)="UnSubToggle()">Unsubscribe</button>
         </div>
@@ -51,9 +51,8 @@
 
   <div class="WholePage" *ngIf="USchange">
     <div class="editShowCss">
-    <h2 style="color: white;">The Current Plan will Be</h2>
-    <h2 style="color: white;">Unsubscribed...</h2>
-    <h2 style="color: white;">Are You Sure?</h2>
+    
+    <h2 style="color: white;">Are You Sure to change or add?</h2>
     <div style="display: flex;" class="button"><button>Yes</button> <button (click)="UChange()">No</button></div>
     </div>
   </div>

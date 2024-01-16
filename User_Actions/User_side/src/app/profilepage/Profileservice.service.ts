@@ -13,6 +13,7 @@ export class ProfileService {
   name !: string;
   duserprofile !: Iuser;
 
+  
   constructor(private http:HttpClient)
   {}
   getUserProfile(id:number):Observable<Iuser> {
